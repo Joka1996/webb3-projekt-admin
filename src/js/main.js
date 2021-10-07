@@ -20,12 +20,15 @@ let updateName = document.getElementById("formNameUpdate");
 let updateProg = document.getElementById("formProgUpdate");
 let updateGrade = document.getElementById("formGradeUpdate");
 let updateSyllabus = document.getElementById("formSyllabusUpdate");
-// document.getElementById("hide").style.display = "none";
+document.getElementById("hide").style.display = "none";
 
 // händelsehanterare
 window.addEventListener("load", getCourses);
 addButton.addEventListener("click", addCourse);
-updateButton.addEventListener("click", updateCourse);
+updateButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  updateCourse();
+});
 
 // funktioner
 function getCourses() {
@@ -42,7 +45,7 @@ function getCourses() {
         // console.log(course);
         output.innerHTML += `
         <tr id="row">
-        <td data-label="ID">${course.id}</td>
+        <td data-label="ID"><a id="${course.id}" href="#section2" onClick="reveal(this.id)"> ${course.id}</a></td>
         <td data-label="Kurskod">${course.course_code}</td>
         <td data-label="Kursnamn">${course.course_name}</td>
         <td data-label="Progression">${course.course_progression}</td>
@@ -54,6 +57,7 @@ function getCourses() {
       });
     });
 }
+// <td data-label="Uppdatera"> <button onClick="updateCourse(event,${course.id})" >uppdatera</button  </td>
 
 function addCourse() {
   // hämta värdet i formuläret
@@ -80,7 +84,6 @@ function addCourse() {
     .then((data) => {
       // ladda om listan om något lagts till.
       getCourses();
-      // location.reload();
     })
     // om något blir fel så skickas ett felmeddelande.
     .catch((error) => {
@@ -106,8 +109,13 @@ function deleteCourse(id) {
     });
 }
 
-function updateCourse() {
+function reveal(clicked_id) {
   document.getElementById("hide").style.display = "";
+  document.getElementById("formIDdUpdate").value = clicked_id;
+}
+
+function updateCourse() {
+  // e.preventDefault();
   let clicked_id = updateID.value;
   let course_code2 = updateCode.value;
   let course_name2 = updateName.value;
