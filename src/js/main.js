@@ -108,14 +108,14 @@ function deleteCourse(id) {
 
 function updateCourse(id) {
   document.getElementById("hide").style.display = "";
-  let id2 = updateID.value;
+  let clicked_id = updateID.value;
   let course_code2 = updateCode.value;
   let course_name2 = updateName.value;
   let course_progression2 = updateProg.value;
   let course_grade2 = updateGrade.value;
   let course_syllabus2 = updateSyllabus.value;
   let Updatecourse = {
-    id: id2,
+    id: clicked_id,
     course_code: course_code2,
     course_name: course_name2,
     course_progression: course_progression2,
