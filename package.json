@@ -1,0 +1,26 @@
+{
+  "name": "moment5",
+  "version": "1.0.0",
+  "description": "webb 3 moment 5",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joel Karlsson",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "browser-sync": "^2.27.5",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.42.1"
+  }
+}
