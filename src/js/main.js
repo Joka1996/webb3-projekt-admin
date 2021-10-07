@@ -20,7 +20,7 @@ let updateName = document.getElementById("formNameUpdate");
 let updateProg = document.getElementById("formProgUpdate");
 let updateGrade = document.getElementById("formGradeUpdate");
 let updateSyllabus = document.getElementById("formSyllabusUpdate");
-document.getElementById("hide").style.display = "none";
+// document.getElementById("hide").style.display = "none";
 
 // händelsehanterare
 window.addEventListener("load", getCourses);
@@ -42,7 +42,7 @@ function getCourses() {
         // console.log(course);
         output.innerHTML += `
         <tr id="row">
-        <td data-label="Uppdatera"> <button id="${course.id}" onClick="updateCourse(${course.id})"> Uppdatera</button></td>
+        <td data-label="ID">${course.id}</td>
         <td data-label="Kurskod">${course.course_code}</td>
         <td data-label="Kursnamn">${course.course_name}</td>
         <td data-label="Progression">${course.course_progression}</td>
@@ -106,7 +106,7 @@ function deleteCourse(id) {
     });
 }
 
-function updateCourse(id) {
+function updateCourse() {
   document.getElementById("hide").style.display = "";
   let clicked_id = updateID.value;
   let course_code2 = updateCode.value;
@@ -125,7 +125,7 @@ function updateCourse(id) {
   // Skicka med id och vilken metod som ska användas i URL
   fetch(
     "https://studenter.miun.se/~joka2005/writeable/webb3/student-API/api.php?id=" +
-      id,
+      clicked_id,
     {
       method: "PUT",
       body: JSON.stringify(Updatecourse),
