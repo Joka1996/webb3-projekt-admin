@@ -143,6 +143,7 @@ function updateCourse() {
     .then((data) => {
       // ladda om listan om något uppdateras.
       getCourses();
+      window.scrollTo(0, 0);
     })
     // om något blir fel så skickas ett felmeddelande.
     .catch((error) => {
