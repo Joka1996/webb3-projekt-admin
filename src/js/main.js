@@ -58,7 +58,7 @@ function getCourses() {
     });
 }
 // <td data-label="Uppdatera"> <button onClick="updateCourse(event,${course.id})" >uppdatera</button  </td>
-
+// lägg till
 function addCourse() {
   // hämta värdet i formuläret
   let course_code = codeInput.value;
@@ -108,12 +108,13 @@ function deleteCourse(id) {
       console.log("Error: ", error);
     });
 }
-
+// visa uppdateringsformuläret vid klick på id och sätt i id som value.
 function reveal(clicked_id) {
   document.getElementById("hide").style.display = "";
   document.getElementById("formIDdUpdate").value = clicked_id;
 }
 
+// uppdatera en kurs
 function updateCourse() {
   // e.preventDefault();
   let clicked_id = updateID.value;
