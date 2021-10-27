@@ -4,108 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/sass/main.css" />
-    <title>moment5</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Admin-inlogg</title>
   </head>
   <body>
-    <header></header>
-    <div class="container">
-      <h1>Moment5</h1>
-      <section class="courses">
-        <table>
-          <caption>
-            Kurser jag har läst:
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col">ID:</th>
-              <th scope="col">Kurskod:</th>
-              <th scope="col">Kursnamn:</th>
-              <th scope="col">Progression:</th>
-              <th scope="col">Slutbetyg:</th>
-              <th scope="col">Kursplan:</th>
-              <th scope="col">Radera:</th>
-            </tr>
-          </thead>
-          <tbody id="output"></tbody>
-        </table>
-      </section>
-      <article class="addCourse" id="hide">
-        <h2 id="section2">Uppdatera Kurs</h2>
-        <div class="form">
-          <form action="#" id="updateOutput">
-            <label for="formCode">id:</label>
-            <input
-              type="text"
-              id="formIDdUpdate"
-              name="formIDUpdate"
-              required
-            />
-            <label for="formCode">Kurskod:</label>
-            <input
-              type="text"
-              id="formCodeUpdate"
-              name="formCodeUpdate"
-              required
-            />
-            <label for="formName">Kursnamn:</label>
-            <input
-              type="text"
-              id="formNameUpdate"
-              name="formNameUpdate"
-              required
-            />
-            <label for="formProg">Progression:</label>
-            <input
-              type="text"
-              id="formProgUpdate"
-              name="formProgUpdate"
-              required
-            />
-            <label for="formGrade">Slutbetyg:</label>
-            <input
-              type="text"
-              id="formGradeUpdate"
-              name="formGradeUpdate"
-              required
-            />
-            <label for="formSyllabus">Kursplan:</label>
-            <input
-              type="text"
-              id="formSyllabusUpdate"
-              name="formSyllabusUpdate"
-              required
-            />
-
-            <input type="submit" id="updateButton" value="Uppdatera kurs" />
-          </form>
-        </div>
-      </article>
-      <article class="addCourse">
-        <h2 id="section1">Lägg till kurs:</h2>
-        <div class="form">
-          <form action="#">
-            <label for="formCode">Kurskod:</label>
-            <input type="text" id="formCode" name="formCode" required />
-            <label for="formName">Kursnamn:</label>
-            <input type="text" id="formName" name="formName" required />
-            <label for="formProg">Progression:</label>
-            <input type="text" id="formProg" name="formProg" required />
-            <label for="formGrade">Slutbetyg:</label>
-            <input type="text" id="formGrade" name="formGrade" required />
-            <label for="formSyllabus">Kursplan:</label>
-            <input type="text" id="formSyllabus" name="formSyllabus" required />
-            <input type="submit" id="addButton" value="Lägg till kurs" />
-          </form>
-        </div>
-      </article>
+    <h1>Logga in som admin</h1>
+    <!-- <div class="login">
+      <form id="register-form">
+        <input id="username" type="text" placeholder="Användarnamn" value="" />
+        <input id="pw" type="password" placeholder="Lösenord" value="" />
+        <input
+          id="rgstr_btn"
+          type="submit"
+          value="get Account"
+          onClick="store()"
+        />
+      </form> -->
+      <form action="#" id="login-form">
+        <input type="text" id="checkUsername" placeholder="Admin" />
+        <input type="password" id="checkPW" placeholder="Lösenord" />
+        <input type="submit" value="Logga in" onClick="check()" />
+      </form>
     </div>
-    <footer>
-      <ul>
-        <li>Av: Joel Karlsson</li>
-        <li>Moment 5 Webbutveckling 3</li>
-      </ul>
-    </footer>
+    <!-- <script src="js/login.js"></script> -->
     <script src="js/main.js"></script>
   </body>
 </html>

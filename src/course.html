@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/sass/main.css" />
+    <title>Admin</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#topp">Topp</a>
+        <a href="#section1">Kurser</a>
+        <a href="#work">Arbete</a>
+        <a href="#websites">Webbplats</a>
+        <a href="index.html">Logga ut</a>
+      </nav>
+    </header>
+    <div class="container">
+      <h1 id="topp">Admin</h1>
+      <div id="section1"></div>
+      <section class="courses">
+        <table>
+          <caption>
+            Kurser:
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Uppdatera:</th>
+              <th scope="col">Lärosäte:</th>
+              <th scope="col">Kursnamn:</th>
+              <th scope="col">Läsperiod:</th>
+              <th scope="col">Slutbetyg:</th>
+              <th scope="col">Kursplan:</th>
+              <th scope="col">Radera:</th>
+            </tr>
+          </thead>
+          <tbody id="output"></tbody>
+        </table>
+      </section>
+      <article class="addCourse">
+        <h2>Lägg till kurs:</h2>
+        <div class="form">
+          <form action="#">
+            <label for="formCode">Lärosäte:</label>
+            <input type="text" id="formUni" name="formUni" required />
+            <label for="formName">Kursnamn:</label>
+            <input type="text" id="formName" name="formName" required />
+            <label for="formProg">Läsperiod:</label>
+            <input type="text" id="formPeriod" name="formPeriod" required />
+            <label for="formGrade">Slutbetyg:</label>
+            <input type="text" id="formGrade" name="formGrade" required />
+            <label for="formSyllabus">Kursplan:</label>
+            <input type="text" id="formSyllabus" name="formSyllabus" required />
+            <input type="submit" id="addButton" value="Lägg till kurs" />
+          </form>
+        </div>
+      </article>
+      <article class="addCourse" id="hide">
+        <h2 id="section2">Uppdatera Kurs:</h2>
+        <div class="form">
+          <form action="#" id="updateOutput">
+            <label for="formIDUpdate">ID:</label>
+            <input type="text" id="formIDUpdate" name="formIDUpdate" required />
+            <label for="formUniUpdate">Lärosäte:</label>
+            <input
+              type="text"
+              id="formUniUpdate"
+              name="formUniUpdate"
+              required
+            />
+            <label for="formNameUpdate">Kursnamn:</label>
+            <input
+              type="text"
+              id="formNameUpdate"
+              name="formNameUpdate"
+              required
+            />
+            <label for="formPeriodUpdate">Läsperiod:</label>
+            <input
+              type="text"
+              id="formPeriodUpdate"
+              name="formPeriodUpdate"
+              required
+            />
+            <label for="formGradeUpdate">Slutbetyg:</label>
+            <input
+              type="text"
+              id="formGradeUpdate"
+              name="formGradeUpdate"
+              required
+            />
+            <label for="formSyllabusUpdate">Kursplan:</label>
+            <input
+              type="text"
+              id="formSyllabusUpdate"
+              name="formSyllabusUpdate"
+              required
+            />
+            <input type="submit" id="updateButton" value="Uppdatera kurs" />
+          </form>
+        </div>
+      </article>
+      <div class="spacer" id="work"></div>
+      <!-- ****************************************************** -->
+      <section>
+        <section class="courses">
+          <table>
+            <caption>
+              Arbete:
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Uppdatera:</th>
+                <th scope="col">Arbetsplats:</th>
+                <th scope="col">Titel:</th>
+                <th scope="col">År:</th>
+                <th scope="col">Radera:</th>
+              </tr>
+            </thead>
+            <tbody id="outputWork"></tbody>
+          </table>
+        </section>
+        <article class="addCourse">
+          <h2 id="section1">Lägg till arbete:</h2>
+          <div class="form">
+            <form action="#">
+              <label for="formPlace-work">Arbetsplats:</label>
+              <input
+                type="text"
+                id="formPlace-work"
+                name="formPlace-work"
+                required
+              />
+              <label for="formTitel-work">Titel:</label>
+              <input
+                type="text"
+                id="formTitel-work"
+                name="formTitel-work"
+                required
+              />
+              <label for="formYear-work">År:</label>
+              <input
+                type="text"
+                id="formYear-work"
+                name="formYear-work"
+                required
+              />
+              <input
+                type="submit"
+                id="addButton-work"
+                value="Lägg till arbete"
+              />
+            </form>
+          </div>
+        </article>
+        <article class="addCourse" id="hide">
+          <h2 id="updateWork">Uppdatera arbete:</h2>
+          <div class="form">
+            <form action="#" id="updateOutputWork">
+              <label for="formIDUpdate-work">Uppdatera:</label>
+              <input
+                type="text"
+                id="formIDUpdate-work"
+                name="formIDUpdate-work"
+                required
+              />
+              <label for="formPlaceUpdate-work">Arbetsplats:</label>
+              <input
+                type="text"
+                id="formPlaceUpdate-work"
+                name="formPlaceUpdate-work"
+                required
+              />
+              <label for="formTitelUpdate-work">Titel:</label>
+              <input
+                type="text"
+                id="formTitelUpdate-work"
+                name="formTitelUpdate-work"
+                required
+              />
+              <label for="formYearUpdate-work">År:</label>
+              <input
+                type="text"
+                id="formYearUpdate-work"
+                name="formYearUpdate-work"
+                required
+              />
+              <input
+                type="submit"
+                id="updateButton-work"
+                value="Uppdatera kurs"
+              />
+            </form>
+          </div>
+        </article>
+      </section>
+      <!-- *************************webbplatser ************************-->
+      <div class="spacer" id="websites"></div>
+      <section class="courses">
+        <table>
+          <caption>
+            Webbplatser:
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">ID:</th>
+              <th scope="col">Namn:</th>
+              <th scope="col">Kurs:</th>
+              <th scope="col">Om:</th>
+              <th scope="col">URL:</th>
+              <th scope="col">Bild:</th>
+              <th scope="col">Radera:</th>
+            </tr>
+          </thead>
+          <tbody id="outputWeb"></tbody>
+        </table>
+      </section>
+      <article class="addCourse">
+        <h2>Lägg till webbplats:</h2>
+        <div class="form">
+          <form action="#">
+            <label for="formWebName">Namn:</label>
+            <input type="text" id="formWebName" name="formWebName" required />
+            <label for="formWebCourse">Kurs:</label>
+            <input
+              type="text"
+              id="formWebCourse"
+              name="formWebCourse"
+              required
+            />
+            <label for="formWebAbout">Om:</label>
+            <input type="text" id="formWebAbout" name="formWebAbout" required />
+            <label for="formWebURL">URL:</label>
+            <input type="text" id="formWebURL" name="formWebURL" required />
+            <label for="formWebPic">Bild:</label>
+            <input type="text" id="formWebPic" name="formWebPic" required />
+            <input
+              type="submit"
+              id="addButtonWeb"
+              value="Lägg till webbplats"
+            />
+          </form>
+        </div>
+      </article>
+      <article class="addCourse" id="hide">
+        <h2 id="updateWebsite">Uppdatera webbplats:</h2>
+        <div class="form">
+          <form action="#" id="updateOutput">
+            <label for="webIDUpdate">ID:</label>
+            <input type="text" id="webIDUpdate" name="webIDUpdate" required />
+            <label for="webNameUpdate">Namn:</label>
+            <input
+              type="text"
+              id="webNameUpdate"
+              name="webNameUpdate"
+              required
+            />
+            <label for="webCourseUpdate">Kurs:</label>
+            <input
+              type="text"
+              id="webCourseUpdate"
+              name="webCourseUpdate"
+              required
+            />
+            <label for="webAboutUpdate">Om:</label>
+            <input
+              type="text"
+              id="webAboutUpdate"
+              name="webAboutUpdate"
+              required
+            />
+            <label for="webURLUpdate">URL:</label>
+            <input type="text" id="webURLUpdate" name="webURLUpdate" required />
+            <label for="webPicUpdate">Bild:</label>
+            <input type="text" id="webPicUpdate" name="webPicUpdate" required />
+            <input
+              type="submit"
+              id="updateButtonWeb"
+              value="Uppdatera webbplats"
+            />
+          </form>
+        </div>
+      </article>
+    </div>
+    <footer>
+      <ul>
+        <li>Av: Joel Karlsson</li>
+        <li>Projekt-uppgift</li>
+      </ul>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

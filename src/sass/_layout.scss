@@ -6,6 +6,26 @@ body {
   font-size: large;
 }
 
+nav {
+  position: fixed;
+  font-size: larger;
+  padding: 1%;
+  background-color: $blueColor;
+  padding-bottom: 20px;
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  a {
+    color: white;
+    padding: 2%;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -18,7 +38,10 @@ body {
 // nesting för tabell med kurser
 .courses {
   margin-bottom: 3%;
-
+  margin-top: 3%;
+  img {
+    max-width: 50%;
+  }
   h2 {
     text-align: center;
   }
@@ -55,13 +78,13 @@ body {
     text-transform: uppercase;
   }
 
-  #row button {
+  .row button {
     background-color: $redColor;
     color: white;
     padding: 2%;
     border-radius: 4px;
   }
-  #row button:hover {
+  .row button:hover {
     background-color: $redHover;
     cursor: pointer;
   }
@@ -119,6 +142,9 @@ footer {
 
 @media screen and (max-width: 600px) {
   .courses {
+    img {
+      max-width: 20%;
+    }
     table {
       border: 0;
     }
