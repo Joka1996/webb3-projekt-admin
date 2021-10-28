@@ -2,6 +2,8 @@
 // skapa en användare
 let username = document.getElementById("username");
 let pw = document.getElementById("pw");
+let loginBTN = document.getElementById("loginBTN");
+
 // spara admin i localStorage
 function store() {
   localStorage.setItem("username", username.value);
@@ -19,9 +21,9 @@ function check() {
 
   if (checkUsername.value == storedUsername && checkPW.value == storedPW) {
     // Simulate an HTTP redirect:
-    window.location = "../course.html";
+    window.location =
+      "https://studenter.miun.se/~joka2005/writeable/webb3/projektAdmin/pub/course.html";
   } else {
     alert("Fel användarnamn/lösenord");
   }
 }
-// console.log(localStorage);
